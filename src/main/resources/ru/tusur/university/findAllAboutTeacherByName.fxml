@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Tooltip?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.tusur.university.Controller">
+   <children>
+      <Text layoutX="69.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск сведений о преподавателе и его кафедре" wrappingWidth="369.21630859375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Label alignment="CENTER" layoutX="139.0" layoutY="77.0" prefHeight="17.0" prefWidth="223.0" text="Введите ФИО преподавателя" textAlignment="CENTER" />
+      <TextField fx:id="inputTeacherName" layoutX="91.0" layoutY="94.0" prefHeight="26.0" prefWidth="325.0" >
+         <tooltip><Tooltip text="введите ФИО на русском языке" /></tooltip>
+      </TextField>
+      <Text layoutX="91.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Результаты поиска:" wrappingWidth="188.21630859375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="169.0" layoutY="138.0" mnemonicParsing="false" onAction="#showAllAboutTeacherByName" prefHeight="26.0" prefWidth="169.0" text="Поиск" />
+
+      <Text fx:id="deptName" layoutX="91.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название кафедры:" wrappingWidth="494.21630859375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="deptNumber" layoutX="91.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер кафедры:" wrappingWidth="405.21630859375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="teacherName" layoutX="91.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ФИО преподавателя:" wrappingWidth="405.21630859375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="teacherPosition" layoutX="91.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Должность:" wrappingWidth="405.21630859375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="teacherNumber" layoutX="91.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Персональный номер:" wrappingWidth="405.21630859375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text fx:id="teacherHireDate" layoutX="91.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата трудоустройста:" wrappingWidth="405.21630859375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Tooltip?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.tusur.university.Controller">
+   <children>
+      <Text layoutX="150.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск дисциплин, читаемых на кафедре" textAlignment="CENTER" wrappingWidth="369.21630859375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label alignment="CENTER" layoutX="214.0" layoutY="77.0" prefHeight="17.0" prefWidth="223.0" text="Введите номер кафедры" textAlignment="CENTER" />
+      <TextField fx:id="inputDepartmentNumber" layoutX="163.0" layoutY="94.0" prefHeight="26.0" prefWidth="325.0" >
+        <tooltip><Tooltip text="введите в целочисленном формате (от 1 до 14)" /></tooltip>
+      </TextField>
+      <Text layoutX="244.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Результаты поиска:" wrappingWidth="188.21630859375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="250.0" layoutY="141.0" mnemonicParsing="false" onAction="#showSubjectsByDepartment" prefHeight="26.0" prefWidth="169.0" text="Поиск" />
+      <TableView fx:id="subjectsTable" layoutX="54.0" layoutY="251.0" prefHeight="200.0" prefWidth="561.0">
+        <columns>
+          <TableColumn fx:id="subjectName" prefWidth="297.0" text="Название" />
+          <TableColumn fx:id="subjectCode" minWidth="0.0" prefWidth="66.0" text="Код" />
+          <TableColumn fx:id="subjectSemester" prefWidth="66.0" text="Семестр" />
+          <TableColumn fx:id="subjectMajor" prefWidth="127.0" text="Специальность" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
