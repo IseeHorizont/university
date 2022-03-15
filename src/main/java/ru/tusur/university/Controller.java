@@ -107,7 +107,6 @@ public class Controller {
     private TableColumn<Department, String> departmentFaculty;
 
 
-
     @FXML
     public void openWindowForShowListOfTeachersByDepartment() throws IOException {
         Stage stage = new Stage();
@@ -129,13 +128,12 @@ public class Controller {
             printAlert("Ошибка ввода текста", "Введите в поле целочисленный номер кафедры");
             return;
         }
-
         fullName.setCellValueFactory(new PropertyValueFactory<>("fullName"));
         hireDate.setCellValueFactory(new PropertyValueFactory<>("hireDate"));
         position.setCellValueFactory(new PropertyValueFactory<>("position"));
         personalNumber.setCellValueFactory(new PropertyValueFactory<>("personalNumber"));
         numberOfDepartment.setCellValueFactory(new PropertyValueFactory<>("numberOfDepartment"));
-        // func from SQLHandler -> ArrayList of teachers
+        // we're getting ArrayList of teachers from DB
         List<Teacher> allFoundTeachers = SQLHandler.findListOfTeachersByDepartmentInDB(currentNumberOfDepartment);
         if (allFoundTeachers.isEmpty()) {
             printAlert("Ошибка ввода", "Неверный номер кафедры");
@@ -144,7 +142,6 @@ public class Controller {
         teacherTable.setItems(teachers);
     }
 
-    // show second function's window
     @FXML
     public void openWindowForShowAllAboutTeacherByName() throws IOException {
         Stage stage = new Stage();
@@ -156,7 +153,6 @@ public class Controller {
         stage.showAndWait();
     }
 
-    // second func
     @FXML
     public void showAllAboutTeacherByName() {
         String currentTeacherName = inputTeacherName.getText().trim();
@@ -164,7 +160,7 @@ public class Controller {
             printAlert("Ошибка ввода", "ФИО преподавателя введены неверно");
             return;
         }
-        // get 'inputTeacherName' --> DB --> return object 'teacher'
+        // to get 'inputTeacherName', go to DB which return object 'teacher'
         Teacher currentTeacher = SQLHandler.findTeacherByName(currentTeacherName);
         if (currentTeacher == null) {
             printAlert("Ошибка поиска", "Преподаватель не найден или его ФИО введены неверно...");
@@ -172,7 +168,6 @@ public class Controller {
         }
         // need to find 'name of department' by 'number of department'
         String deptNameFromDB = SQLHandler.getDepartmentNameByNumber(currentTeacher.getNumberOfDepartment());
-
         deptName.setText("Кафедра " + deptNameFromDB);
         deptNumber.setText("Номер кафедры: " + currentTeacher.getNumberOfDepartment());
         teacherName.setText("ФИО преподавателя: " + currentTeacher.getFullName());
@@ -181,7 +176,6 @@ public class Controller {
         teacherHireDate.setText("Дата трудоустройста: " + currentTeacher.getHireDate());
     }
 
-    // show third function's window
     @FXML
     public void openWindowForShowSubjectsByDepartment() throws IOException {
         Stage stage = new Stage();
@@ -193,7 +187,6 @@ public class Controller {
         stage.showAndWait();
     }
 
-    // third function
     @FXML
     public void showSubjectsByDepartment() {
         subjectsTable.getItems().clear();
@@ -218,7 +211,6 @@ public class Controller {
         subjectsTable.setItems(subjects);
     }
 
-    // fourth function's window
     @FXML
     public void openWindowForShowListOfDepartment() throws IOException {
         Stage stage = new Stage();
@@ -230,7 +222,6 @@ public class Controller {
         stage.showAndWait();
     }
 
-    // fourth function
     @FXML
     public void showListOfDepartment() {
         departmentTable.getItems().clear();
@@ -240,8 +231,6 @@ public class Controller {
         departmentFaculty.setCellValueFactory(new PropertyValueFactory<>("departmentFaculty"));
         // departments from DB
         List<Department> allDepartments = SQLHandler.findListOfDepartments();
-        // TODO INFO
-        System.out.println(allDepartments);
         departments.addAll(allDepartments);
         departmentTable.setItems(departments);
     }
@@ -254,12 +243,14 @@ public class Controller {
         alert.showAndWait();
     }
 
+    // выход из программы по вкладке 'выход'
     public void exitMenu(ActionEvent actionEvent){
         Platform.runLater(() ->{
             System.exit(0);
         });
     }
 
+    // показ информации о приложении по вкладке 'о нас'
     public void showAboutUs(ActionEvent actionEvent) throws FileNotFoundException {
         Alert info = new Alert(Alert.AlertType.INFORMATION);
         info.setHeaderText("О проекте");
