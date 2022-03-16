@@ -12,7 +12,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="703.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.tusur.university.Controller">
    <children>
       <Label alignment="CENTER" layoutX="198.0" layoutY="31.0" prefHeight="28.0" prefWidth="308.0" text="Список преподавателей заданой кафедры" textAlignment="CENTER" />
-      <Text layoutX="231.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите название кафедры или её номер" wrappingWidth="242.0" />
+      <Text layoutX="231.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите номер кафедры" wrappingWidth="242.0" />
       <TextField fx:id="inputDepartmentField" layoutX="204.0" layoutY="114.0" prefHeight="28.0" prefWidth="296.0" >
           <tooltip><Tooltip text="введите в целочисленном формате (от 1 до 14)" /></tooltip>
       </TextField>

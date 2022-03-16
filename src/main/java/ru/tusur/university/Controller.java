@@ -157,7 +157,7 @@ public class Controller {
     public void showAllAboutTeacherByName() {
         String currentTeacherName = inputTeacherName.getText().trim();
         if (currentTeacherName == null || currentTeacherName.isEmpty()) {
-            printAlert("Ошибка ввода", "ФИО преподавателя введены неверно");
+            printAlert("Ошибка ввода", "ФИО преподавателя не введены");
             return;
         }
         // to get 'inputTeacherName', go to DB which return object 'teacher'
