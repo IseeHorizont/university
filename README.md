@@ -5,19 +5,23 @@ Used technologies: Java 11 + JavaFX 11 + SQLite
 The application have four fuction:
 
 0. Main window
-<img src="images/main.png" width="200">
+<img src="images/main.png" width="600">
+
 
 First funtion shows list of teachers by department
-![](images/func1.png)
+
+<img src="images/func1.png" width="600">
 
 Second funtion shows all info about teacher by its full name
-![](images/func2.png)
+<img src="images/func2.png" width="600">
 
 Third funtion shows us all subjects which department have
-![](images/func3.png)
+<img src="images/func3.png" width="600">
 
 Fourth funtion shows list Of department at an university
-![](images/func4.png)
+
+<img src="images/func4.png" width="600">
 
 'About us' - information about app in Russian
-![](images/about.png)
+
+<img src="images/about.png" width="600">
