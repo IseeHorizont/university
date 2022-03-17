@@ -5,7 +5,7 @@ Used technologies: Java 11 + JavaFX 11 + SQLite
 The application have four fuction:
 
 0. Main window
-![](images/main.png)
+<img src="images/main.png" width="200">
 
 First funtion shows list of teachers by department
 ![](images/func1.png)
@@ -20,3 +20,4 @@ Fourth funtion shows list Of department at an university
 ![](images/func4.png)
 
 'About us' - information about app in Russian
+![](images/about.png)
